@@ -1,4 +1,4 @@
-package tools;
+package utils.tools;
 
 public class Asserts {
 	public static void test(boolean value) {

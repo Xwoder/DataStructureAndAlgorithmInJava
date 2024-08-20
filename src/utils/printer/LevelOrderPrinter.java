@@ -1,4 +1,4 @@
-package com.mj.printer;
+package utils.printer;
 
 import java.util.ArrayList;
 import java.util.Collection;

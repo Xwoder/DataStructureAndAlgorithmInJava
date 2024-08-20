@@ -1,4 +1,4 @@
-package com.mj.printer;
+package utils.printer;
 
 public interface BinaryTreeInfo {
 	/**
