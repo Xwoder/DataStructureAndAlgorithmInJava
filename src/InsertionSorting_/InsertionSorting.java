@@ -34,12 +34,39 @@ public class InsertionSorting {
         }
     }
 
+    /**
+     * 插入排序，使用折半查找优化
+     *
+     * @param array 待排序的数组
+     */
     public static void sortByOptimizedMoveOneByOne(Integer[] array) {
         if (array == null) {
             return;
         }
 
 
+        for (int i = 1; i < array.length; i++) {
+            final int curValue = array[i];
+
+            int begin = 0;
+            int end = i;
+
+            while (begin < end) {
+                final int mid = begin + ((end - begin) >> 1);
+                final Integer midValue = array[mid];
+                if (curValue >= midValue) {
+                    begin = mid + 1;
+                } else {
+                    end = mid;
+                }
+            }
+
+            for (int j = i; j > begin; j--) {
+                array[j] = array[j - 1];
+            }
+
+            array[begin] = curValue;
+        }
     }
 
 
