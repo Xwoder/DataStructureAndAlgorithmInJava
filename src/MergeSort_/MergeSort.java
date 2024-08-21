@@ -24,12 +24,12 @@ public class MergeSort {
     private static void merge(Integer[] array, int begin, int mid, int end) {
         final Integer[] leftHalf = new Integer[mid - begin];
         if (mid - begin >= 0) {
-            System.arraycopy(array, begin, leftHalf, begin - begin, mid - begin);
+            System.arraycopy(array, begin, leftHalf, 0, mid - begin);
         }
 
         final Integer[] rightHalf = new Integer[end - mid];
         if (end - mid >= 0) {
-            System.arraycopy(array, mid, rightHalf, mid - mid, end - mid);
+            System.arraycopy(array, mid, rightHalf, 0, end - mid);
         }
 
         int leftCur = 0;
